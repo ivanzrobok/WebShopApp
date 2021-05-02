@@ -1,0 +1,14 @@
+﻿@model FirstWebapplication.ViewModels.HomeViewModel
+@using FirstWebapplication.Data.Models
+<h1>Улюблені автомобілі</h1>
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Car car in Model.favCar)
+        {
+            @Html.Partial("AllCars", car);//підкючаємо файл з папки AllCars
+             //всі шаблони будуть шукатися в папці shared
+
+        }
+    }
+</div>
